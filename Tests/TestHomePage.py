@@ -6,7 +6,7 @@ from Utilities.CommonPageUtilities import Util
 
 @pytest.mark.usefixtures("initiate_driver")
 class TestHomePage:
-
+    @pytest.mark.smoke
     def test_final_order(self):
         LoginPageFunctions().sign_in_button()
         LoginPageFunctions().perform_login(correct_email, correct_passwd)
